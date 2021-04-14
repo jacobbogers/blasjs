@@ -12,7 +12,7 @@
         "commonjs"
     ],
     "bugs": {
-        "url": "https://github.com/jacobbogers/blasjs/issues"
+        "url": "https://github.com/R-js/blasjs/issues"
     },
     "contributes": {
         "typescriptServerPlugins": [
@@ -21,7 +21,9 @@
             }
         ]
     },
-    "dependencies": {},
+    "dependencies": {
+        "@sys-tools/proc": "0.0.3-alpha"
+    },
     "devDependencies": {
         "@rollup/plugin-commonjs": "^16.0.0",
         "@rollup/plugin-node-resolve": "^10.0.0",
@@ -40,7 +42,7 @@
         "typescript": "^4.1.2",
         "typescript-eslint-language-service": "^4.1.1"
     },
-    "homepage": "https://github.com/jacobbogers/blasjs#readme",
+    "homepage": "https://github.com/R-js/blasjs#readme",
     "keywords": [
         "BLAS",
         "linear algebra",
@@ -65,7 +67,7 @@
     "name": "blasjs",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/jacobbogers/blasjs.git"
+        "url": "git+https://github.com/R-js/blasjs.git"
     },
     "scripts": {
         "prebuild": "rm -rf *tsbuildInfo && tsc && tsc -p tsconfig-commonjs.json",
@@ -74,6 +76,6 @@
         "lint": "eslint 'src/**/*.ts'",
         "lint:fix": "eslint 'src/**/*.ts' --fix",
         "test": "jest level1 level2 level3 utils",
-        "prepublish": "npm run test"
+        "prepublishOnly": "npm run test"
     }
 }
